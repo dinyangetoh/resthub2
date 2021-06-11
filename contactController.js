@@ -21,9 +21,7 @@ exports.index = function (req, res) {
 exports.new = function (req, res) {
     var contact = new Contact();
     contact.donor = req.body.donor ? req.body.donor : contact.donor;
-    contact.gender = req.body.gender;
     contact.amount = req.body.amount;
-    contact.phone = req.body.phone;
 // save the contact and check for errors
     contact.save(function (err) {
         // Check for validation error
@@ -53,9 +51,7 @@ exports.update = function (req, res) {
         if (err)
             res.send(err);
         contact.donor = req.body.donor ? req.body.donor : contact.donor;
-        contact.gender = req.body.gender;
         contact.amount = req.body.amount;
-        contact.phone = req.body.phone;
 // save the contact and check for errors
         contact.save(function (err) {
             if (err)

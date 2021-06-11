@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost/resthub', { useNewUrlParser: true});
+mongoose.connect('mongodb://localhost/freya-donation', { useNewUrlParser: true});
 
 // Heroku Mongoose connection
 // mongoose.connect('mongodb://heroku_5686p02g:sia8l3fni4jmu7qbn0ac1t75mf@ds349857.mlab.com:49857/heroku_5686p02g', { useNewUrlParser: true });
@@ -39,5 +39,5 @@ app.get('/', (req, res) => res.send('Hello World with Express'));
 app.use('/api', apiRoutes);
 // Launch app to listen to specified port
 app.listen(port, function () {
-    console.log("Running RestHub on port " + port);
+    console.log("Running FreyaDonation on port " + port);
 });

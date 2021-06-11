@@ -2,11 +2,11 @@
 var mongoose = require('mongoose');
 // Setup schema
 var contactSchema = mongoose.Schema({
-    name: {
+    donor: {
         type: String,
         required: true
     },
-    email: {
+    amount: {
         type: String,
         required: true
     },

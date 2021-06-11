@@ -1,7 +1,7 @@
 {
-  "name": "resthub2",
+  "name": "freya-donation-database-api",
   "version": "2.0.0",
-  "description": "A Node App demonstrating simple RESTFul API implementation",
+  "description": "Database API for freya donation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,7 @@
     "mongodb",
     "express"
   ],
-  "author": "David Inyang-Etoh",
+  "author": "pururun",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

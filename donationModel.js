@@ -10,6 +10,10 @@ var donationSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    txlink: {
+        type: String,
+        required: true
+    },
     create_date: {
         type: Date,
         default: Date.now

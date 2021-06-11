@@ -22,7 +22,8 @@ exports.new = function (req, res) {
     var donation = new Donation();
     donation.donor = req.body.donor ? req.body.donor : donation.donor;
     donation.amount = req.body.amount;
-// save the donation and check for errors
+    donation.txlink = req.body.txlink;
+    // save the donation and check for errors
     donation.save(function (err) {
         // Check for validation error
         if (err)
@@ -52,6 +53,7 @@ exports.update = function (req, res) {
             res.send(err);
         donation.donor = req.body.donor ? req.body.donor : donation.donor;
         donation.amount = req.body.amount;
+        donation.txlink = req.body.txlink;
 // save the donation and check for errors
         donation.save(function (err) {
             if (err)

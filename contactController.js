@@ -22,7 +22,7 @@ exports.new = function (req, res) {
     var contact = new Contact();
     contact.donor = req.body.donor ? req.body.donor : contact.donor;
     contact.gender = req.body.gender;
-    contact.email = req.body.email;
+    contact.amount = req.body.amount;
     contact.phone = req.body.phone;
 // save the contact and check for errors
     contact.save(function (err) {
@@ -54,7 +54,7 @@ exports.update = function (req, res) {
             res.send(err);
         contact.donor = req.body.donor ? req.body.donor : contact.donor;
         contact.gender = req.body.gender;
-        contact.email = req.body.email;
+        contact.amount = req.body.amount;
         contact.phone = req.body.phone;
 // save the contact and check for errors
         contact.save(function (err) {
